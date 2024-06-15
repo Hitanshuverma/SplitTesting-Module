@@ -81,7 +81,6 @@ public class UserLayoutServiceImpl implements UserLayoutService {
     private String determineLayoutForUser(String cookieId) {
         logger.info("UserLayoutServiceImpl : determineLayoutForUser");
         Set<String> layouts = layoutDao.getLayouts();
-        logger.info("got maal {}", layouts);
         if (layouts == null || layouts.isEmpty()) {
             throw new RuntimeException("No layouts configured in Redis.");
         }
